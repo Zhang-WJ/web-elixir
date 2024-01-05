@@ -25,3 +25,5 @@ cowboy_example-*.tar
 
 # Temporary files for e.g. tests
 /tmp
+
+/.idea

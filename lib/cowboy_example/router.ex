@@ -3,14 +3,15 @@ defmodule CowboyExample.Router do
   This module defines all the routes, params and handlers.
   This module is also the handler for the root route
   """
-  alias CowboyExample.Router.Handlers.{Root, Greet}
+  alias CowboyExample.Router.Handlers.{Root, Greet, Static}
 
   def routes do
     [
       {:_,
        [
          {"/", Root, []},
-         {"/greet/:who", [who: :nonempty], Greet, []}
+         {"/greet/:who", [who: :nonempty], Greet, []},
+         {"/static/:page", [page: :nonempty], Static, []}
        ]}
     ]
   end
